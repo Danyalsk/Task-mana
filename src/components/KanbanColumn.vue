@@ -9,7 +9,10 @@
     item-key="id"
   >
     <template #item="{ element }">
-      <div style="height: 80px; border: 1px solid white; margin-top: 10px; margin-bottom: 10px">
+      <div
+        class="bg-gray-800 border-dashed border-2 border-gray-700 text-gray-400 text-center p-2 rounded-md m-2"
+        style="height: 80px; margin-top: 10px; margin-bottom: 10px"
+      >
         {{ element.name }}
       </div>
     </template>
@@ -27,8 +30,8 @@ const dragOptions = computed(() => {
   return {
     animation: 200,
     group: 'description',
-    disabled: false,
-    ghostClass: 'ghost'
+    disabled: false
+    // ghostClass: 'ghost'
   }
 })
 </script>
