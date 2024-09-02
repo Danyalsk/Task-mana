@@ -86,19 +86,21 @@
       </div>
     </div>
 
-    <TodoDialog v-model="todo" />
+    <!-- <TodoDialog v-model="todo" />
     <InReview v-model="review" />
-    <InProgress v-model="progress" />
+    <InProgress v-model="progress" /> -->
+
+    <KanbanColumn />
   </SideLayout>
 </template>
 
 <script setup lang="ts">
-import TodoDialog from '@/components/TodoDialog.vue'
+// import TodoDialog from '@/components/TodoDialog.vue'
 import KanbanColumn from '@/components/KanbanColumn.vue'
 import SideLayout from '@/components/SideLayout.vue'
 import { ref } from 'vue'
-import InReview from '@/components/InReview.vue'
-import InProgress from '@/components/InProgress.vue'
+// import InReview from '@/components/InReview.vue'
+// import InProgress from '@/components/InProgress.vue'
 import { useKanbanStore } from '@/stores/kanbans'
 
 const todo = ref(false)
