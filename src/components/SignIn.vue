@@ -4,7 +4,7 @@
       <div class="h-8 w-8 mb-9">
         <img src="@/assets/snowflake.png" alt="logo" />
       </div>
-      <div class="text-white text-xl font-sans mb-8 text-center">Create An New Account</div>
+      <div class="text-white text-xl font-sans mb-8 text-center">Welcome Back</div>
 
       <div class="max-w-sm space-y-6 flex flex-col items-center">
         <input
@@ -30,7 +30,7 @@
         @click="handleLogin"
         style="width: 200px"
       >
-        Create
+        Login
       </button>
 
       <p
@@ -38,7 +38,7 @@
         class="text-white mt-4 text-sm cursor-pointer hover:underline"
         style="font-size: 11px"
       >
-        Login
+        Sign Up
       </p>
     </div>
   </div>
@@ -49,30 +49,27 @@ import { useRouter } from 'vue-router'
 import axios from 'axios'
 import { ref } from 'vue'
 
-const email = ref('')
-const password = ref('')
+const email = ref('danyal@example.com')
+const password = ref('Danyal123')
 
 const router = useRouter()
+
 const handleLogin = () => {
   axios
-    .post('http://localhost:5050/api/auth/signup', {
+    .post('http://localhost:5050/api/auth/login', {
       email: email.value,
       password: password.value
     })
     .then((response) => {
-      const data = response.data
-      console.log(data)
-      localStorage.setItem('token', data.token)
+      localStorage.setItem('token', response.data.token)
       router.push({ name: 'home' })
     })
     .catch((error) => {
-      const errorMessage = error.response?.data?.message || 'An error occurred'
-      console.error(errorMessage)
-      alert(errorMessage)
+      console.log(error)
     })
 }
 
 const handleSignClick = () => {
-  router.push({ name: 'signIn' })
+  router.push({ name: 'signUp' })
 }
 </script>
