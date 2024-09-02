@@ -10,8 +10,8 @@
         <input
           type="text"
           class="py-1.5 px-3 border border-gray-400 rounded-lg text-sm disabled:opacity-50 disabled:pointer-events-none dark:bg-custom-dark dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-700 dark:focus:ring-neutral-600 w-full"
-          placeholder="Enter your email address"
-          style="font-size: 0.75rem; width: 180%"
+          placeholder="Enter your email address sm:w-12"
+          style="font-size: 0.75rem; width: 170%"
           v-model="email"
         />
 
@@ -19,7 +19,7 @@
           type="password"
           class="py-1.5 px-3 border border-gray-400 rounded-lg text-sm disabled:opacity-50 disabled:pointer-events-none dark:bg-custom-dark dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-700 dark:focus:ring-neutral-600 w-full"
           placeholder="Enter your password"
-          style="font-size: 0.75rem; width: 180%"
+          style="font-size: 0.75rem; width: 170%"
           v-model="password"
         />
       </div>
@@ -28,7 +28,7 @@
         type="button"
         class="text-gray-900 bg-gray-100 focus:ring-4 font-medium rounded text-sm px-4 py-2 text-center mt-8 w-full max-w-xs"
         @click="handleLogin"
-        style="width: 200px"
+        style="width: 170px"
       >
         Login
       </button>
