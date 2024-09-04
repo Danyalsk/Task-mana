@@ -102,6 +102,8 @@ const progress = ref(false)
 
 const todoArray = useKanbanStore()
 
+console.log('home')
+
 const name = todoArray.todos
 console.log(name)
 
