@@ -26,7 +26,7 @@
           </button>
         </div>
 
-        <KanbanColumn v-model="name" />
+        <KanbanColumn v-model="array2" />
       </div>
       <div style="width: 100%; padding: 10px">
         <div class="flex justify-between">
@@ -102,7 +102,12 @@ const progress = ref(false)
 
 console.log('home')
 
-const name = todoArray.todos
+const name = ref([
+  { id: 1, name: '' },
+  { id: 2, name: '' },
+  { id: 3, name: '' },
+  { id: 4, name: '' }
+])
 console.log(name)
 
 const array2 = ref([
@@ -119,14 +124,4 @@ const array3 = ref([
   { id: 4, name: '' },
   { id: 5, name: '' }
 ])
-
-const array4 = ref([
-  { id: 1, name: 'Item 1' },
-  { id: 2, name: 'Item 2' },
-  { id: 3, name: 'Item 3' },
-  { id: 4, name: 'Item 4' },
-  { id: 5, name: 'Item 5' }
-])
-
-let todoArray = array4
 </script>
