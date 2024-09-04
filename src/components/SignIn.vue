@@ -63,6 +63,7 @@ const handleLogin = () => {
     .then((response) => {
       localStorage.setItem('token', response.data.token)
       router.push({ name: 'home' })
+      console.log(response.data)
     })
     .catch((error) => {
       console.log(error)

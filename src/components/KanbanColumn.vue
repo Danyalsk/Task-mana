@@ -10,8 +10,8 @@
   >
     <template #item="{ element }">
       <div
-        class="bg-gray-800 border-dashed border-2 border-gray-700 text-gray-400 text-center p-2 rounded-md m-2"
-        style="height: 80px; margin-top: 10px; margin-bottom: 10px"
+        class="bg-ticket-bg text-gray-400 text-center p-2 rounded-md m-2"
+        style="height: 70px; margin-top: 10px; margin-bottom: 10px; color: red; font-size: 0.9rem"
       >
         {{ element.name }}
       </div>
