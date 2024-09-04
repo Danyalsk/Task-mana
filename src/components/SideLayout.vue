@@ -211,7 +211,6 @@ import { Dialog, TransitionRoot, TransitionChild } from '@headlessui/vue'
 import {
   Bars3Icon,
   XMarkIcon,
-  MagnifyingGlassIcon,
   Cog6ToothIcon,
   UsersIcon,
   FolderIcon
