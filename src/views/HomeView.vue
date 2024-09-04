@@ -100,8 +100,6 @@ const todo = ref(false)
 const review = ref(false)
 const progress = ref(false)
 
-const todoArray = useKanbanStore()
-
 console.log('home')
 
 const name = todoArray.todos
@@ -129,4 +127,6 @@ const array4 = ref([
   { id: 4, name: 'Item 4' },
   { id: 5, name: 'Item 5' }
 ])
+
+let todoArray = array4
 </script>
